@@ -1,0 +1,20 @@
+{
+  "name": "global-pip",
+  "version": "0.1.0",
+  "description": "Add global pip helper due to lack of pipe operator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nivanson/global-pip.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pip",
+    "pipe",
+    "javascript"
+  ],
+  "author": "Nils Ivanson",
+  "license": "MIT"
+}

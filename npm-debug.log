@@ -1,0 +1,92 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/nils/.asdf/installs/nodejs/4.2.3/bin/node',
+1 verbose cli   '/Users/nils/.asdf/installs/nodejs/4.2.3/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   './' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose publish [ './' ]
+5 silly cache add args [ './', null ]
+6 verbose cache add spec ./
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: './',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: './',
+7 silly cache add   spec: '/Users/nils/src/global-pip',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/nils/.npm/src/0.1.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/nils/.npm/src/0.1.0/package.tgz',
+9 verbose tar pack   '/Users/nils/src/global-pip' ]
+10 verbose tarball /Users/nils/.npm/src/0.1.0/package.tgz
+11 verbose folder /Users/nils/src/global-pip
+12 info prepublish src@0.1.0
+13 verbose addLocalTarball adding from inside cache /Users/nils/.npm/src/0.1.0/package.tgz
+14 silly cache afterAdd src@0.1.0
+15 verbose afterAdd /Users/nils/.npm/src/0.1.0/package/package.json not in flight; writing
+16 verbose afterAdd /Users/nils/.npm/src/0.1.0/package/package.json written
+17 silly publish { name: 'src',
+17 silly publish   version: '0.1.0',
+17 silly publish   description: 'Add global pip helper due to lack of pipe operator',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   keywords: [ 'pip', 'pipe', 'javascript' ],
+17 silly publish   author: { name: 'Nils Ivanson' },
+17 silly publish   license: 'MIT',
+17 silly publish   readme: '# global-pip example\n\n```\n\'hello \'\n  .pip(x => x + x) // => \'hello hello \'\n  .pip(x => x.trim()) // => \'hello hello\'\n  .pip(x => x.split(\' \') // => [\'hello\', \'hello\']\n  .pip(x => x.join(\' my friend \') // => \'hello my friend hello\'\n```\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'cb12252e8ddbf57f4eb1bd9cb4c3ac7633d750c6',
+17 silly publish   _id: 'src@0.1.0',
+17 silly publish   _shasum: 'fcebc8bb6517662d0ce8e8231c46e6183b7f41f8',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name src
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/src
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/nils/.npm/src/0.1.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/src
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 13:21:48
+28 verbose request using bearer token for auth
+29 verbose request id 32f9c79a89de0a85
+30 http request PUT https://registry.npmjs.org/src
+31 http 403 https://registry.npmjs.org/src
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '97',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Wed, 11 May 2016 11:21:48 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-fra1223-FRA',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1462965708.247329,VS0,VE699',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 verbose request invalidating /Users/nils/.npm/registry.npmjs.org/src on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: you do not have permission to publish "src". Are you logged in as the correct user? : src
+35 verbose stack     at makeError (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/Users/nils/.asdf/installs/nodejs/4.2.3/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid src
+38 verbose cwd /Users/nils/src/global-pip
+39 error Darwin 15.0.0
+40 error argv "/Users/nils/.asdf/installs/nodejs/4.2.3/bin/node" "/Users/nils/.asdf/installs/nodejs/4.2.3/bin/npm" "publish" "./"
+41 error node v4.2.3
+42 error npm  v2.14.7
+43 error code E403
+44 error you do not have permission to publish "src". Are you logged in as the correct user? : src
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
